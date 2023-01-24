@@ -87,22 +87,22 @@ char	**ft_copy_map(char **map, t_program *prg)
 	return (map_copy);
 }
 
-void ft_clean_exit(t_program *prg)
+void	ft_clean_exit(t_program *prg)
 {
-    ft_printf("      ʕ •ᴥ•ʔ\nThanks for playing!\n      ʕ •ᴥ•ʔ\n");
-    mlx_destroy_image(prg->mx, prg->t.e.img);
-    mlx_destroy_image(prg->mx, prg->t.w.img);
-    mlx_destroy_image(prg->mx, prg->s.img[0]);
-    mlx_destroy_image(prg->mx, prg->s.img[1]);
-    mlx_destroy_image(prg->mx, prg->s.img[2]);
-    mlx_destroy_image(prg->mx, prg->t.c.img);
-    mlx_destroy_image(prg->mx, prg->t.f.img);
-    mlx_destroy_image(prg->mx, prg->t.z.img);
-    mlx_destroy_window(prg->mx, prg->w);
-    ft_freematrix(prg->map.basemtx, prg);
-    ft_freematrix(prg->map.emx, prg);
-    mlx_destroy_display(prg->mx);
-    exit(0);
+	ft_printf("      ʕ •ᴥ•ʔ\nThanks for playing!\n      ʕ •ᴥ•ʔ\n");
+	mlx_destroy_image(prg->mx, prg->t.e.img);
+	mlx_destroy_image(prg->mx, prg->t.w.img);
+	mlx_destroy_image(prg->mx, prg->s.img[0]);
+	mlx_destroy_image(prg->mx, prg->s.img[1]);
+	mlx_destroy_image(prg->mx, prg->s.img[2]);
+	mlx_destroy_image(prg->mx, prg->t.c.img);
+	mlx_destroy_image(prg->mx, prg->t.f.img);
+	mlx_destroy_image(prg->mx, prg->t.z.img);
+	mlx_destroy_window(prg->mx, prg->w);
+	ft_freematrix(prg->map.basemtx, prg);
+	ft_freematrix(prg->map.emx, prg);
+	mlx_destroy_display(prg->mx);
+	exit(0);
 }
 
 void	ft_initialize(t_program *prg)
