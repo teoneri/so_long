@@ -102,6 +102,7 @@ void	ft_clean_exit(t_program *prg)
 	ft_freematrix(prg->map.basemtx, prg);
 	ft_freematrix(prg->map.emx, prg);
 	mlx_destroy_display(prg->mx);
+	free(prg->mx);
 	exit(0);
 }
 

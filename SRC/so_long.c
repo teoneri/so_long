@@ -38,14 +38,14 @@ int	main(int argc, char **argv)
 {
 	t_program	prg;
 
-	prg.map.basemtx = ft_open_map(argv[1]);
 	if (argc != 2 || !prg.map.basemtx)
 	{
 		perror("Error\nCould not find map");
-		return (0);
+		exit(0);
 	}
-	prg.mx = mlx_init();
+	prg.map.basemtx = ft_open_map(argv[1]);
 	ft_valid_map(prg.map.basemtx, &prg);
+	prg.mx = mlx_init();
 	ft_initialize(&prg);
 	ft_find_enemy_position(prg.map.emx, &prg);
 	mlx_hook(prg.w, 2, 1L << 0, *ft_input, &prg);
